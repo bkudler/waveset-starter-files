@@ -14,11 +14,11 @@ In `boot-file.scd` where it says
 ```
 //drag and drop files paths here
 ~files = (
-	\currSet : "",
-  \leaveOneSet : "",
-  \leaveTwoSet : "",
-  \transferSetOne : "",
-	\transferSetTwo : ""
+    \currSet : "",
+    \leaveOneSet : "",
+    \leaveTwoSet : "",
+    \transferSetOne : "",
+    \transferSetTwo : ""
 );
  
 ```
