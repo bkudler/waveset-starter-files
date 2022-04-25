@@ -23,4 +23,4 @@ In `boot-file.scd` where it says
  
 ```
 
-you will have to pick a mono audio file for each variable. Put the aboslute path in between the quotation marks. Each file is used for a different waveset transformation.
+Pick a mono audio file for each variable. Put the aboslute path in between the quotation marks. Each file is used for a different waveset transformation.
