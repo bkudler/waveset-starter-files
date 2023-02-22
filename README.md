@@ -1,14 +1,8 @@
-# waveset-player--for-trevor-wishart-
+# WavesetTransformer:For Trevor Wishart. Bootstrap files
 
+These files will help a player get started working with [WavesetTransformer:For Trevor Wishart](https://github.com/bkudler/WavesetTransformer-ForTrevorWishart). The tutorial videos in the repository for the main instrument will explain how to work with these files.
 
-This creates an interface in SuperCollider for working with all of the waveset transformations described by Trevor Wishart, as recounted by Curtis Road in *Microsound*, plus a few weird ones I found along the way.
-
-You will have to have [the waveset quark](https://github.com/supercollider-quarks/Wavesets) installed.
-
-More info on [installing quarks](https://doc.sccode.org/Guides/UsingQuarks.html)
-
-
-you'll need to add in some files in certain places.
+Files will need to be added to get sound.
 
 In `boot-file.scd` where it says 
 ```
