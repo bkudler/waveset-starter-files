@@ -1,48 +1,45 @@
-~moves.startFlop();
+~inst.startFlop();
+~inst.takeSnapshot();
+~inst.showSnapshot();
 
-~moves.crankThatSoulja();
+~inst.crankThatSoulja();
 
-~moves.norm();
+~inst.norm();
 
-~moves.wrinkle();
+~inst.wrinkle();
 
-~moves.sputter();
+~inst.sputter();
 
-~moves.drone();
+~inst.drone();
 
-~moves.cook();
+~inst.cook();
 
-~moves.funWithNorm();
+~inst.funWithNorm();
 
-~moves.freak();
+~inst.freak();
 
-~moves.bleepAbout();
+~inst.bleepAbout();
 
-~moves.subZipper();
+~inst.subZipper();
 
-~moves.subAndBlop();
+~inst.subAndBlop();
 
-~moves.transferBlang();
+~inst.transferBlang();
 
-~moves.biter(0.5,220);
+~inst.biter(0.5,220);
 
-~moves.sayWow();
-~moves.sayWow(rrand(2,9),0.2);
-~moves.interleaveSetsTwo(1,1);
-~moves.sayWow(10,3);
-~moves.sayWow(7,0.8);
-~moves.sayWow({rrand(2,9)},0.2);
-~moves.sayWow({rrand(3,8)}, 2.25);
-~moves.sayWow(rrand(3,8), 0.5);
+~inst.sayWow();
+~inst.sayWow(10,3);
 
-~moves.vasilate();
+~inst.vasilate();
 
-~moves.slurp(0.8);
+~inst.slurp(0.8);
 
-~moves.climb();
+~inst.climb();
 
-~moves.humm(2, 0.06, 0.65);
+~inst.humm();
+~inst.humm(2, 0.06, 0.65);
 
-~moves.currFunc
+~inst.currFunc
 
-~moves.norm();
+~inst.norm();

@@ -1,40 +1,15 @@
-//allocate more memory for SuperCollider
-s.options.memSize = 8192 * 10;
-//suggested sample rate
+//suggested memory and sample rate. If the audio driver being used has a different sample rate, change appropriately.
+
+s.options.memSize = 8192 * 200;
 s.options.sampleRate = 48000;
+//might need to be: s.options.sampleRate = 44100;
 
-
-// IF YOU WANT TO ROUTE YOUR AUDIO SOMEWHERE ELSE ON YOUR MACHINE
- o = Server.default.options;
- o.device = "BlackHole 16ch";
-// o.device = "Universal Audio Thunderbolt"
- o.numOutputBusChannels = 16;
-
-//drag and drop files paths here
 ~files = (
 	\currSet : "",
-    \leaveOneSet : "",
-    \leaveTwoSet : "",
-    \transferSetOne : "",
-	\transferSetTwo : ""
+	\leaveOneSet: "",
+	\leaveTwoSet: "",
+    \transferSet : "",
 );
+~inst = WavesetTransformerPlayer(20, ~files,0, 10);
 
-~moves = WavesetTransformerPlayer(20,~files);
-
-~moves.changeLeaveOneSet(Wavesets.from("/Samples/use-one.aiff"));
-~moves.returnLeaveOneSet();
-
-~moves.changeLeaveTwoSet(Wavesets.from(~files.leaveOneSet));
-~moves.returnLeaveTwoSet();
-
-~moves.changeTransferSetOne(Wavesets.from(~files.transferSetOne));
-~moves.returnTransferSetOne();
-
-~moves.changeTransferSetTwo((Wavesets.from(~files.leaveOneSet));
-~moves.returnTransferSetTwo();
-
-~moves.changeCurrSet(Wavesets.from(""));
-
-~moves.waveset.currSet.name
-~moves.returnCurrSet();
 

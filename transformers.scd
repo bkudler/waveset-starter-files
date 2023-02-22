@@ -1,44 +1,72 @@
-~moves.harmonizeSets({0.75},5,5);
-~moves.harmonizeSets({rrand(0.4,0.65)},20,20);
-~moves.waveset.shouldHarmonize = false;
+~inst.harmonizeSets({0.85}, 10,5);
+~inst.ramp(\harmonizeLevel, 20, 10);
+~inst.ramp(\harmonizeNormLevel, 10, 5000);
+~inst.ramp(\harmLevel, 10, 0.75);
+~inst.waveset.shouldHarmonize = false;
 
-~moves.deleteSets(1,30,false);
-~moves.deleteSets(2,50,true);
-~moves.randomDeleteSets(1, 10,false);
-~moves.randomDeleteSets(5,10,true);
-~moves.waveset.shouldDelete = false;
-~moves.waveset.shouldRandomDelete = false;
-~moves.waveset.shouldDeletePause = true;
+~inst.deleteSets(1, 5,false);
+~inst.ramp(\deleteLevel, 80, 50);
+~inst.ramp(\deleteNormLevel, 60, 20);
+~inst.randomDeleteSets(1, 5, false);
+~inst.waveset.shouldDelete = false;
+~inst.waveset.shouldRandomDelete = false;
+~inst.waveset.shouldDeletePause = true;
+~inst.waveset.shouldDeletePause = false;
 
-~moves.shrinkSets(1.1);
-~moves.waveset.shouldShrink = false;
+~inst.shrinkSets(1.2);
+~inst.ramp(\shrinkAmt, 30, 1.2);
+~inst.waveset.shouldShrink = false;
 
-~moves.shuffleSets({5});
-~moves.shuffleSets({rrand(2,80)});
-~moves.waveset.shouldShuffle = false;
+~inst.shuffleSets({30});
+~inst.ramp(\shuffAmount, 20, 10);
+~inst.waveset.shouldShuffle = false;
 
-~moves.reverseSets(2,0);
-~moves.waveset.shouldReverse = false;
+~inst.reverseSets(10, 0);
+~inst.ramp(\reverseLevel, 10, 20);
+~inst.ramp(\reverseNormLevel, 10, 50);
+~inst.waveset.shouldReverse = false;
 
-~moves.transferSetsOne(3,3);
-~moves.waveset.shouldTransferOne = false;
+~inst.transferSets(1, 2);
+~inst.ramp(\transferLevel, 5, 10);
+~inst.ramp(\transferNormLevel, 70, 100);
+~inst.waveset.shouldTransfer = false;
+~inst.changeTransferSet(~inst_two);
 
-~moves.transferSetsTwo(3,11);
-~moves.waveset.shouldTransferTwo = false;
+~inst.interleaveSetsOne(1, 10);
+~inst.ramp(\interleaveOneLevel, 100, 50);
+~inst.ramp(\interleaveOneNormLevel, 50, 500);
+~inst.waveset.shouldInterleaveOne = false;
+~inst.changeLeaveOneSet(~inst_two);
 
-~moves.interleaveSetsOne(1,1);
-~moves.waveset.shouldInterleaveOne = false;
+~inst.interleaveSetsTwo(3, 3);
+~inst.ramp(\interleaveTwoLevel, 50, 10);
+~inst.ramp(\interleaveTwoNormLevel, 20, 900);
+~inst.waveset.shouldInterleaveTwo = false;
+~inst.changeLeaveTwoSet(~inst_two);
 
-~moves.interleaveSetsTwo(3,3);
-~moves.waveset.shouldInterleaveTwo = false;
+~inst.fxSwap(50, 10);
+~inst.ramp(\fxLevel, 10, 1);
+~inst.ramp(\fxNormLevel, 10, 3);
+~inst.waveset.shouldFx = false;
 
-~moves.normalizeSets(2,2);
-~moves.waveset.shouldNormalize = false;
+~inst.normalizeSets(20, 0.1);
+~inst.ramp(\normalizeAmount, 200, 1);
+~inst.ramp(\normalizeThresh, 200, 1);
+~inst.waveset.shouldNormalize = false;
 
-~moves.subSets(9,9);
-~moves.waveset.waveSubMod = {rrand(600,1100)};
-~moves.waveset.waveSubMod =  {~moves.waveset.currSet.xings.size};
-~moves.waveset.shouldSub = false;
+~inst.waveset.waveSubMod = {200};
+~inst.waveset.waveSubMod =  {~sax.waveset.currSet.xings.size};
+~inst.ramp(\waveSubMod, 3, 90);
+~inst.subSets(10, 200);
+~inst.ramp(\subLevel, 30, 1);
+~inst.ramp(\subNormLevel, 90, 200);
+~inst.waveset.shouldSub = false;
+~inst.waveset.waves.showKeys();
+~inst.changeSubWave('');
+~inst.waveset.randomWave();
+~inst.waveset.subBuf.plot
+
+
 
 
 
